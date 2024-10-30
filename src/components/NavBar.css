@@ -1,0 +1,89 @@
+/* Estilos gerais */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden; /* Evita rolagem lateral */
+}
+
+.container {
+  width: 100vw; /* Garante que o AppBar ocupe 100% da largura da tela */
+}
+
+.navbar-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Responsividade para telas menores */
+@media only screen and (max-width: 768px) {
+  .navbar-title {
+    margin-right: 10px;
+  }
+
+  .navbar-actions button {
+    font-size: 12px;
+    
+  }
+
+  .buttoUser {
+    font-size: 12px;
+  }
+
+  .logout {
+    font-size: 10px;
+  }
+  
+  .navbar-brand {
+    font-size: 5px !important;
+   
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .navbar-title .navbar-brand {
+    font-size: 12px !important; /* Maior especificidade */
+    letter-spacing: normal;
+  }
+
+  .navbar-actions button {
+    font-size: 12px;
+    
+  }
+
+  .buttoUser {
+    font-size: 12px;
+  }
+
+  .logout {
+    font-size: 10px;
+  }
+  
+  
+}
+
+/* Ajuste para iPhone 13 */
+@media (max-width: 390px) {
+  .navbar-title {
+    font-size: 12px;
+  }
+
+  .navbar-brand {
+    font-size: 12px !important;
+    
+    width: 10px;
+  }
+  .title{
+    font-size: 12px;
+  }
+
+  .navbar-actions button {
+    font-size: 10px;
+  }
+  
+  .buttonUser {
+    font-size: 10px;
+  }
+}

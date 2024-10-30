@@ -1,0 +1,205 @@
+/* Grid container para organizar as tabelas */
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Espaçamento entre os itens */
+  padding: 0 10px; /* Espaçamento à esquerda e à direita do container */
+  width: 100vw;
+  box-sizing: border-box;
+  overflow-x: auto; /* Permite rolagem horizontal se necessário */
+}
+
+/* Grid item container */
+.grid-item {
+  position: relative; /* Permite o posicionamento relativo se necessário */
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa o grid-item */
+  padding: 10px;
+  border: 1px solid #dadada;
+  box-sizing: border-box;
+  min-width: 580px;/* Garante que o grid-item tenha a largura mínima*/
+ 
+}
+
+
+
+/* Garantia que a tabela não ultrapasse o scroll-container */
+table {
+  width: 100%; /* Ajusta a largura da tabela conforme o conteúdo */
+  min-width: 100%; /* Garante que a tabela tenha largura mínima para rolar se necessário */
+  border-collapse: collapse;
+}
+
+/* Ajustes de estilo para as células da tabela */
+th, td {
+  text-align: center;
+  padding: 6px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  font-size: 1rem;
+}
+
+td {
+  font-size: 1rem;
+}
+
+.red {
+  color: red;
+}
+
+.orange {
+  color: orange;
+}
+
+.green {
+  color: green;
+}
+
+.accumulated-residue {
+  margin-top: 11px;
+  font-size: 1.1rem;
+}
+
+.dinamica {
+  font-size: 21px;
+  margin-left: 10px;
+}
+
+
+/* Estilos para telas pequenas (até 768px) */
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    flex-direction: column;
+    padding: 0 5px; /* Reduzido o padding para telas pequenas */
+    width: calc(100vw - 10px); /* Ajusta a largura para considerar o padding reduzido */
+  }
+
+  .grid-item {
+    flex: 1 1 100%; /* Cada tabela ocupará 100% da largura disponível */
+    max-width: 90% !important; /* Garante que não haverá largura mínima */
+    overflow: hidden;
+    min-width: 200px;
+  }
+
+  table {
+    font-size: 0.7rem; /* Reduzido para caber melhor em telas pequenas */
+  }
+
+  th {
+    font-size: 0.8rem;
+  }
+  
+  td {
+    font-size: 0.7rem;
+  }
+  /* Container rolável para tabelas */
+.scroll-container {
+  overflow-x: auto; /* Permite rolar horizontalmente */
+  white-space: nowrap; /* Impede quebra de linha, mantém a tabela em uma linha */
+  width: 100%; /* Ajusta a largura para preencher o grid-item */
+  box-sizing: border-box;
+}
+
+}
+
+/* Estilos para telas maiores (acima de 768px) - 2x2 */
+@media only screen and (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Define 2 colunas */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 0 10px; /* Adiciona padding à esquerda e à direita */
+    width: calc(100vw - 80px); /* Ajusta a largura total para considerar o padding */
+  }
+
+  .grid-item {
+    flex: 1 1 calc(50% - 20px); /* Cada tabela ocupará 50% da largura */
+    max-width: calc(50% - 20px); /* Garante que não ultrapasse a largura da tela */
+  }
+}
+
+/* Estilos para telas maiores (monitores acima de 1024px) */
+@media only screen and (min-width: 1327px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Mantém 2 colunas */
+    gap: 30px; /* Aumenta o espaçamento entre os itens */
+    padding: 0 20px; /* Aumenta o padding em telas maiores */
+    width: calc(100vw - 40px); /* Ajusta a largura total para monitores */
+  }
+
+  .grid-item {
+    min-width: 850px; /* Aumenta o tamanho mínimo dos itens da grid */
+    flex: 1 1 calc(50% - 30px); /* Ajusta o tamanho das tabelas para ocupar mais espaço */
+    max-width: calc(50% - 30px); /* Garante que não ultrapasse a largura da tela */
+    min-width: 580px;
+  }
+
+  table {
+    font-size: 1rem; /* Tamanho de fonte maior para monitores */
+  }
+
+  th, td {
+    padding: 10px; /* Aumenta o espaçamento entre células */
+  }
+}
+
+@media only screen and (min-width: 1380px) {
+  .grid-item {
+    min-width: 850px; /* Aumenta o tamanho mínimo dos itens da grid */
+    flex: 1 1 calc(50% - 30px); /* Ajusta o tamanho das tabelas para ocupar mais espaço */
+    max-width: calc(50% - 30px); /* Garante que não ultrapasse a largura da tela */
+    min-width: 630px;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .grid-item {
+    min-width: 850px; /* Aumenta o tamanho mínimo dos itens da grid */
+    flex: 1 1 calc(50% - 30px); /* Ajusta o tamanho das tabelas para ocupar mais espaço */
+    max-width: calc(50% - 30px); /* Garante que não ultrapasse a largura da tela */
+    min-width: 685px;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .grid-item {
+    min-width: 850px; /* Aumenta o tamanho mínimo dos itens da grid */
+    flex: 1 1 calc(50% - 30px); /* Ajusta o tamanho das tabelas para ocupar mais espaço */
+    max-width: calc(50% - 30px); /* Garante que não ultrapasse a largura da tela */
+    min-width: 785px;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  .grid-item {
+    min-width: 850px; /* Aumenta o tamanho mínimo dos itens da grid */
+    flex: 1 1 calc(50% - 30px); /* Ajusta o tamanho das tabelas para ocupar mais espaço */
+    max-width: calc(50% - 30px); /* Garante que não ultrapasse a largura da tela */
+    min-width: 895px;
+  }
+}
+
+/* Modo retrato (vertical) */
+@media (orientation: portrait) {
+  .grid-container {
+    padding: 0 10px; /* Espaçamento para modo retrato */
+  }
+
+  .grid-item {
+    max-width: 100%; /* Garante que não haverá largura mínima */
+    /* min-width: 580px; */
+  }
+}
+
+/* Modo paisagem (horizontal) */
+@media (orientation: landscape) {
+  .grid-container {
+    flex-direction: row;
+    padding: 0 10px; /* Espaçamento para modo paisagem */
+  }
+
+  .grid-item {
+    flex: 1 1 calc(50% - 20px); /* Cada tabela ocupará 50% da largura */
+    max-width: calc(50% - 20px); /* Garante que não ultrapasse a largura da tela */
+  }
+}
